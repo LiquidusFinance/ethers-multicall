@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "mocha -r @ts-tools/node \"test/**/*.test.ts\"",
+    "test": "mocha -r @ts-tools/node \"test/**/*.test.ts\" --timeout 15000",
     "build": "tsc",
     "lint": "tslint -c tslint.json '{src,test}/**/*.ts' --fix",
     "prepare": "yarn build && yarn test && yarn lint"
